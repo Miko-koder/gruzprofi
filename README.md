@@ -5,21 +5,12 @@
 ```markdown
 # ГрузПрофи — Готовый сайт для грузоперевозок на 1С-Битрикс
 
-[![Bitrix Marketplace](https://img.shields.io/badge/Bitrix-Marketplace-blue)](https://marketplace.1c-bitrix.ru/)
-[![Version](https://img.shields.io/badge/version-1.0.0-green.svg)]()
+
 
 **ГрузПрофи** — это полнофункциональный лендинг для компаний, занимающихся квартирными и офисными переездами, грузоперевозками и доставкой. Решение полностью готово к работе сразу после установки.
 
 ---
 
-## 📸 Скриншоты
-
-<p align="center">
-  <em><img width="1112" height="706" alt="screenshot" src="https://github.com/user-attachments/assets/263071dc-8f34-41d5-b408-3ac06f0219d5" />
-</em>
-</p>
-
----
 
 ## 🚀 Возможности
 
