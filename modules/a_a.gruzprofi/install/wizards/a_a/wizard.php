@@ -304,7 +304,7 @@ class Step3 extends CWizardStep
         
         foreach ($iblockCodes as $code => $xmlFile) {
             // Создаём инфоблок
-            $id = $this->CreateIBlock(strtolower($code), $iblockNames[$code]);
+            $id = $this->CreateIBlock($code, $iblockNames[$code]);
             $iblockIds[$code] = $id;
             
             // Импортируем XML если файл существует
@@ -697,28 +697,7 @@ window.CARS_ONLINE = <?= json_encode([
 </section>
 
 <script src="https://api-maps.yandex.ru/2.1/' . $apiKeyParam . '"></script>
-<script>
-function initMap() {
-    if (typeof ymaps === "undefined") return setTimeout(initMap, 500);
-    
-    ymaps.ready(function() {
-        var map = new ymaps.Map("yandex-map", {
-            center: [55.76, 37.64],
-            zoom: 11,
-            controls: ["zoomControl", "fullscreenControl"]
-        });
-        
-        var carsOnline = window.CARS_ONLINE;
-        if (carsOnline && carsOnline.length) {
-            carsOnline.forEach(function(car) {
-                var placemark = new ymaps.Placemark(car.coords, {balloonContent: car.title}, {preset: "islands#blueCarIcon"});
-                map.geoObjects.add(placemark);
-            });
-        }
-    });
-}
-document.addEventListener("DOMContentLoaded", initMap);
-</script>
+<!-- Инициализация карты вынесена в шаблон (template_styles.js) -->
 
 <!-- Отзывы -->
 <section class="section-light">

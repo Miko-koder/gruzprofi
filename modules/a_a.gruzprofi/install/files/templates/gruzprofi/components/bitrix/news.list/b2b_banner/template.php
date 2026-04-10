@@ -1,30 +1,14 @@
 <?php
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 
-// Проверяем, есть ли элементы
+// Если нет элементов - ничего не выводим
 if (empty($arResult["ITEMS"])) {
-    // Если нет элементов - выводим дефолтный баннер
-    ?>
-    <div class="b2b-banner">
-        <div class="b2b-content">
-            <h2>Надежный партнер для бизнеса</h2>
-            <p>Организуем офисные переезды под ключ, доставляем товары селлеров на склады маркетплейсов (Wildberries, Ozon), развозим стройматериалы.</p>
-            <div class="b2b-tags">
-                <div class="b2b-tag">Электронный документооборот (ЭДО)</div>
-                <div class="b2b-tag">Безнал с НДС 20% / без НДС</div>
-                <div class="b2b-tag">Персональный менеджер</div>
-            </div>
-        </div>
-        <div>
-            <a href="https://t.me/username" target="_blank" rel="noopener" class="btn btn-primary">Получить прайс для юрлиц</a>
-        </div>
-    </div>
-    <?php
     return;
 }
 
 // Если элементы есть, обрабатываем первый
 $arItem = $arResult["ITEMS"][0];
+
 
 // Безопасно получаем название
 $title = "";
